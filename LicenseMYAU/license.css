@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+@keyframes color {
+  0%    { border-color: #f00; }
+  14.3% { border-color: ##FFA500; }
+  28.6% { border-color: #ffff00; }
+  42.9% { border-color: #0f0; }
+  57.2% { border-color: #42aaff; }
+  71.5%   { border-color: #00f; }
+  85.8% { border-color: #8b00ff; }
+  100% { border-color: #f00; }
+}
+
+@keyframes textcolor {
+  0%    { color: #f00; }
+  14.3% { color: ##FFA500; }
+  28.6% { color: #ffff00; }
+  42.9% { color: #0f0; }
+  57.2% { color: #42aaff; }
+  71.5%   { color: #00f; }
+  85.8%  { color: #8b00ff; }
+  100%  { color: #f00; }
+}
+
+.success {
+  display: none;
+  color: #fff;
+  text-align: center;
+  animation: textcolor 9s infinite linear;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #ddd;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  animation: color 9s infinite linear;
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  animation: textcolor 9s infinite linear;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+/* demo */
+body {
+  font-family: 'Comfortaa', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  font-size: 1.5rem;
+  background-color: #222222;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+}
+
+/*# sourceMappingURL=license.css.map */
